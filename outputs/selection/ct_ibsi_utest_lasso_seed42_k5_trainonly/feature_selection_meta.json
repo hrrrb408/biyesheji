@@ -1,0 +1,28 @@
+{
+  "step1_removed": 0,
+  "step0_train_stats_filter": {
+    "n_input": 14202,
+    "n_after_missing": 14202,
+    "n_after_variance": 13913,
+    "n_after_corr": 6389,
+    "dropped_constant": 0,
+    "dropped_corr": 7524
+  },
+  "step2_u_test": {
+    "n_input": 6389,
+    "n_after_all_missing_drop": 6389,
+    "n_after_constant_drop": 6389,
+    "p_threshold": 0.05,
+    "compute_fdr": false,
+    "n_kept": 553
+  },
+  "lasso": {
+    "penalty": "l1",
+    "l1_ratio": 1.0,
+    "C": 0.3,
+    "cv_select": "1se",
+    "inner_cv": 5,
+    "min_nonzero": 1,
+    "n_selected": 97
+  }
+}

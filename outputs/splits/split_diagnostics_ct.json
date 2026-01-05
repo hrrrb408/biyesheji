@@ -1,0 +1,536 @@
+{
+  "labels_path": "outputs/curation/index_with_labels.csv",
+  "feature_paths": [
+    "outputs/features/ct_radiomics_parotid.csv",
+    "outputs/features/ct_radiomics_submand.csv"
+  ],
+  "splits": {
+    "train_path": "outputs/splits/threeway_train_ids.csv",
+    "val_path": "outputs/splits/threeway_val_ids.csv",
+    "test_path": "outputs/splits/threeway_test_ids.csv"
+  },
+  "split_stats": {
+    "train": {
+      "n": 266,
+      "pos": 110,
+      "neg": 156,
+      "pos_rate": 0.41353383458646614
+    },
+    "val": {
+      "n": 58,
+      "pos": 24,
+      "neg": 34,
+      "pos_rate": 0.41379310344827586
+    },
+    "test": {
+      "n": 58,
+      "pos": 24,
+      "neg": 34,
+      "pos_rate": 0.41379310344827586
+    }
+  },
+  "drift": {
+    "train_vs_val": {
+      "summary": {
+        "n_features_tested": 14202,
+        "ks_median": 0.11148561057816957,
+        "ks_p90": 0.16217267306196526,
+        "ks_gt_0p2": 0.02175749894381073,
+        "ks_gt_0p3": 0.0
+      },
+      "top": [
+        {
+          "feature": "parotid__sym__absdiff__ct__wavelet-LHL_glcm_MaximumProbability",
+          "ks_stat": 0.29841845994296085,
+          "ks_pvalue": 0.0002959541664585977,
+          "delta_mean_std": 0.28842655255512534,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__original_glszm_SizeZoneNonUniformityNormalized",
+          "ks_stat": 0.29543686803214936,
+          "ks_pvalue": 0.00035254952085425097,
+          "delta_mean_std": -0.4212411637183398,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__log-sigma-5-0-mm-3D_gldm_DependenceEntropy",
+          "ks_stat": 0.28364013481980815,
+          "ks_pvalue": 0.0006968830731128722,
+          "delta_mean_std": -0.2699711314007091,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__ct__log-sigma-5-0-mm-3D_glszm_LowGrayLevelZoneEmphasis",
+          "ks_stat": 0.28052890847809175,
+          "ks_pvalue": 0.0008287073016915917,
+          "delta_mean_std": -0.24358511607425049,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-HLL_gldm_DependenceNonUniformityNormalized",
+          "ks_stat": 0.2788436608763288,
+          "ks_pvalue": 0.0009090555163175717,
+          "delta_mean_std": -0.3703159074110649,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__reldiff__ct__original_glszm_SizeZoneNonUniformityNormalized",
+          "ks_stat": 0.2781954887218045,
+          "ks_pvalue": 0.000941042668135173,
+          "delta_mean_std": -0.40918003510538165,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absratio__ct__original_glszm_SizeZoneNonUniformityNormalized",
+          "ks_stat": 0.2781954887218045,
+          "ks_pvalue": 0.000941042668135173,
+          "delta_mean_std": -0.32725784030080945,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__ct__wavelet-HHH_ngtdm_Complexity",
+          "ks_stat": 0.2754731656728027,
+          "ks_pvalue": 0.001096129126595075,
+          "delta_mean_std": 0.4304036397691093,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__ct__log-sigma-5-0-mm-3D_glszm_LargeAreaLowGrayLevelEmphasis",
+          "ks_stat": 0.2754731656728027,
+          "ks_pvalue": 0.001096129126595075,
+          "delta_mean_std": 0.37240325790440487,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__ct__log-sigma-5-0-mm-3D_glszm_LargeAreaLowGrayLevelEmphasis",
+          "ks_stat": 0.27262120819289604,
+          "ks_pvalue": 0.001279514967581532,
+          "delta_mean_std": 0.151291638693334,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__wavelet-LLL_gldm_SmallDependenceEmphasis",
+          "ks_stat": 0.26899144412756026,
+          "ks_pvalue": 0.0015499503287021055,
+          "delta_mean_std": -0.42144523295001046,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_R__ct__log-sigma-5-0-mm-3D_glszm_HighGrayLevelZoneEmphasis",
+          "ks_stat": 0.2663987555094633,
+          "ks_pvalue": 0.0017825823484571735,
+          "delta_mean_std": -0.4239393769707028,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__ct__log-sigma-1-0-mm-3D_glcm_ClusterShade",
+          "ks_stat": 0.26575058335493906,
+          "ks_pvalue": 0.0018450334798913572,
+          "delta_mean_std": -0.39252306002564247,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__ct__wavelet-HHH_glcm_Correlation",
+          "ks_stat": 0.2636764324604615,
+          "ks_pvalue": 0.0020502910714720744,
+          "delta_mean_std": -0.3264955886835259,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__log-sigma-5-0-mm-3D_glszm_LargeAreaEmphasis",
+          "ks_stat": 0.2613430127041742,
+          "ks_pvalue": 0.002321119454417076,
+          "delta_mean_std": 0.2633233298318881,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_R__ct__log-sigma-5-0-mm-3D_ngtdm_Strength",
+          "ks_stat": 0.26108374384236455,
+          "ks_pvalue": 0.002351039519733272,
+          "delta_mean_std": -0.3405672780526291,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__ct__wavelet-HHH_ngtdm_Complexity",
+          "ks_stat": 0.2591392273787918,
+          "ks_pvalue": 0.0025991538040842617,
+          "delta_mean_std": 0.35792312313021596,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__ct__wavelet-HHH_ngtdm_Contrast",
+          "ks_stat": 0.2573243453461239,
+          "ks_pvalue": 0.0028500382152080676,
+          "delta_mean_std": 0.4249203140117514,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-HHL_glcm_Imc2",
+          "ks_stat": 0.2573243453461239,
+          "ks_pvalue": 0.0028500382152080676,
+          "delta_mean_std": 0.12092946253666477,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_R__ct__log-sigma-3-0-mm-3D_glszm_SmallAreaEmphasis",
+          "ks_stat": 0.2569354420534094,
+          "ks_pvalue": 0.002907354919165492,
+          "delta_mean_std": -0.2914160190936122,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__ct__wavelet-HHH_ngtdm_Contrast",
+          "ks_stat": 0.2569354420534094,
+          "ks_pvalue": 0.002907354919165492,
+          "delta_mean_std": 0.36533449212469654,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__ct__wavelet-HHH_glcm_Contrast",
+          "ks_stat": 0.2566761731915997,
+          "ks_pvalue": 0.0029466543513361108,
+          "delta_mean_std": 0.31685558550525944,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__ct__wavelet-HHH_glcm_DifferenceAverage",
+          "ks_stat": 0.2566761731915997,
+          "ks_pvalue": 0.0029466543513361108,
+          "delta_mean_std": 0.31685558550525944,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__wavelet-HHH_glcm_Id",
+          "ks_stat": 0.2566761731915997,
+          "ks_pvalue": 0.0029466543513361108,
+          "delta_mean_std": -0.31684268852788205,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__wavelet-HHH_glcm_Idm",
+          "ks_stat": 0.2566761731915997,
+          "ks_pvalue": 0.0029466543513361108,
+          "delta_mean_std": -0.31684268852788205,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__wavelet-HHH_glcm_Idmn",
+          "ks_stat": 0.2566761731915997,
+          "ks_pvalue": 0.0029466543513361108,
+          "delta_mean_std": -0.31680400389113644,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__wavelet-HHH_glcm_Idn",
+          "ks_stat": 0.2566761731915997,
+          "ks_pvalue": 0.0029466543513361108,
+          "delta_mean_std": -0.3168297925994092,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__ct__wavelet-HHH_glcm_InverseVariance",
+          "ks_stat": 0.2566761731915997,
+          "ks_pvalue": 0.0029466543513361108,
+          "delta_mean_std": 0.31685558550525944,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__ct__wavelet-HHL_firstorder_Skewness",
+          "ks_stat": 0.2548612911589318,
+          "ks_pvalue": 0.003224576776859898,
+          "delta_mean_std": -0.34839767885074774,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__wavelet-LHL_ngtdm_Strength",
+          "ks_stat": 0.2536945812807882,
+          "ks_pvalue": 0.0034130535555557603,
+          "delta_mean_std": -0.18450233543174901,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        }
+      ]
+    },
+    "train_vs_test": {
+      "summary": {
+        "n_features_tested": 14202,
+        "ks_median": 0.1088929219600726,
+        "ks_p90": 0.16061705989110708,
+        "ks_gt_0p2": 0.01753274186734263,
+        "ks_gt_0p3": 0.0002816504717645402
+      },
+      "top": [
+        {
+          "feature": "parotid_R__ct__wavelet-LLL_glszm_ZoneEntropy",
+          "ks_stat": 0.3457350272232305,
+          "ks_pvalue": 1.40404321830496e-05,
+          "delta_mean_std": -0.3611453154781075,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__min__ct__wavelet-LLL_glszm_ZoneEntropy",
+          "ks_stat": 0.3269380347420275,
+          "ks_pvalue": 4.990649040694211e-05,
+          "delta_mean_std": -0.3190561457253378,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__max__ct__wavelet-LLH_glszm_SizeZoneNonUniformity",
+          "ks_stat": 0.3039927404718693,
+          "ks_pvalue": 0.00021243657779272635,
+          "delta_mean_std": 0.387578920618328,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_L__ct__wavelet-LLH_glszm_SizeZoneNonUniformity",
+          "ks_stat": 0.3011407829919627,
+          "ks_pvalue": 0.0002521886832001881,
+          "delta_mean_std": 0.44419821493540756,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__ct__log-sigma-5-0-mm-3D_firstorder_90Percentile",
+          "ks_stat": 0.2920663728286233,
+          "ks_pvalue": 0.00043080975227147514,
+          "delta_mean_std": -0.4172967298236023,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-HLL_firstorder_InterquartileRange",
+          "ks_stat": 0.2741768213637542,
+          "ks_pvalue": 0.0011758282045195266,
+          "delta_mean_std": 0.5200477077728942,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-HLL_firstorder_RobustMeanAbsoluteDeviation",
+          "ks_stat": 0.2741768213637542,
+          "ks_pvalue": 0.0011758282045195266,
+          "delta_mean_std": 0.4954954140355077,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_L__ct__wavelet-LLH_glszm_LowGrayLevelZoneEmphasis",
+          "ks_stat": 0.27262120819289604,
+          "ks_pvalue": 0.001279514967581532,
+          "delta_mean_std": -0.2655710468440453,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_L__ct__wavelet-LLH_gldm_SmallDependenceEmphasis",
+          "ks_stat": 0.2714544983147524,
+          "ks_pvalue": 0.0013604438268674346,
+          "delta_mean_std": 0.4172400489420487,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_R__ct__wavelet-LLH_glszm_GrayLevelNonUniformity",
+          "ks_stat": 0.2688618096966554,
+          "ks_pvalue": 0.001565068724669446,
+          "delta_mean_std": -0.5204353421910849,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__log-sigma-1-0-mm-3D_glszm_SizeZoneNonUniformityNormalized",
+          "ks_stat": 0.26834327197303603,
+          "ks_pvalue": 0.0016053622675468787,
+          "delta_mean_std": 0.28814915730711793,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_R__ct__wavelet-HLL_glszm_GrayLevelNonUniformityNormalized",
+          "ks_stat": 0.26613948664765363,
+          "ks_pvalue": 0.001804301075313492,
+          "delta_mean_std": 0.25632890169430034,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__log-sigma-5-0-mm-3D_gldm_LargeDependenceEmphasis",
+          "ks_stat": 0.26613948664765363,
+          "ks_pvalue": 0.001804301075313492,
+          "delta_mean_std": 0.4077935475656135,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__ct__wavelet-HHH_glrlm_HighGrayLevelRunEmphasis",
+          "ks_stat": 0.2636764324604615,
+          "ks_pvalue": 0.0020502910714720744,
+          "delta_mean_std": 0.41307827508914113,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__ct__wavelet-HHH_glrlm_LowGrayLevelRunEmphasis",
+          "ks_stat": 0.2636764324604615,
+          "ks_pvalue": 0.0020502910714720744,
+          "delta_mean_std": -0.4130766147082731,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-LHH_ngtdm_Contrast",
+          "ks_stat": 0.26354679802955666,
+          "ks_pvalue": 0.002070564297861513,
+          "delta_mean_std": 0.04576778949462181,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__ct__wavelet-LLH_glszm_SizeZoneNonUniformity",
+          "ks_stat": 0.2626393570132227,
+          "ks_pvalue": 0.002169789224850461,
+          "delta_mean_std": 0.48577041624607326,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__ct__wavelet-HHL_glrlm_ShortRunLowGrayLevelEmphasis",
+          "ks_stat": 0.26225045372050815,
+          "ks_pvalue": 0.0022126559781736666,
+          "delta_mean_std": 0.2485189973420874,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-HHH_firstorder_90Percentile",
+          "ks_stat": 0.25758361420793363,
+          "ks_pvalue": 0.0028143655306464657,
+          "delta_mean_std": -0.30849731510915124,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-LHH_glszm_LargeAreaEmphasis",
+          "ks_stat": 0.2556390977443609,
+          "ks_pvalue": 0.003099283786580157,
+          "delta_mean_std": -0.4333587940581365,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__ct__wavelet-LLH_gldm_SmallDependenceEmphasis",
+          "ks_stat": 0.253824215711693,
+          "ks_pvalue": 0.003402531126878018,
+          "delta_mean_std": 0.39593971531867733,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__wavelet-HLH_firstorder_RobustMeanAbsoluteDeviation",
+          "ks_stat": 0.25045372050816694,
+          "ks_pvalue": 0.004019357048371144,
+          "delta_mean_std": 0.1756643190494859,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__log-sigma-5-0-mm-3D_glcm_DifferenceAverage",
+          "ks_stat": 0.24876847290640394,
+          "ks_pvalue": 0.004367659417622132,
+          "delta_mean_std": 0.4156413491081758,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__mean__ct__wavelet-LLL_glszm_ZoneEntropy",
+          "ks_stat": 0.2483795696136894,
+          "ks_pvalue": 0.004442199460263805,
+          "delta_mean_std": -0.22699731641255913,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__ct__wavelet-LLH_glszm_ZonePercentage",
+          "ks_stat": 0.2476017630282603,
+          "ks_pvalue": 0.004627105227543875,
+          "delta_mean_std": 0.4003174518482456,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_L__ct__wavelet-HHH_firstorder_MeanAbsoluteDeviation",
+          "ks_stat": 0.24695359087373606,
+          "ks_pvalue": 0.004777108308730452,
+          "delta_mean_std": 0.22021098154662627,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__ct__wavelet-LLH_gldm_DependenceVariance",
+          "ks_stat": 0.24682395644283123,
+          "ks_pvalue": 0.004793647593333557,
+          "delta_mean_std": 0.3411901453046874,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__max__ct__wavelet-HLH_glcm_Id",
+          "ks_stat": 0.24630541871921183,
+          "ks_pvalue": 0.004930315521906362,
+          "delta_mean_std": -0.33528511452485504,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__ct__log-sigma-5-0-mm-3D_glrlm_RunPercentage",
+          "ks_stat": 0.24565724656468757,
+          "ks_pvalue": 0.00508635032089627,
+          "delta_mean_std": 0.44850080698826866,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__max__ct__log-sigma-3-0-mm-3D_gldm_SmallDependenceLowGrayLevelEmphasis",
+          "ks_stat": 0.24539797770287788,
+          "ks_pvalue": 0.005151092678842452,
+          "delta_mean_std": 0.29326062515724205,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "seed": 42,
+  "labels_path": "outputs/curation/index_with_labels.csv",
+  "feature_paths": [
+    "outputs/features/dosiomics_parotid.csv",
+    "outputs/features/dosiomics_submand.csv"
+  ],
+  "splits": {
+    "train_path": "outputs/splits/threeway_train_ids.csv",
+    "val_path": "outputs/splits/threeway_val_ids.csv",
+    "test_path": "outputs/splits/threeway_test_ids.csv"
+  },
+  "split_stats": {
+    "train": {
+      "n": 266,
+      "pos": 110,
+      "neg": 156,
+      "pos_rate": 0.41353383458646614
+    },
+    "val": {
+      "n": 58,
+      "pos": 24,
+      "neg": 34,
+      "pos_rate": 0.41379310344827586
+    },
+    "test": {
+      "n": 58,
+      "pos": 24,
+      "neg": 34,
+      "pos_rate": 0.41379310344827586
+    }
+  },
+  "drift": {
+    "train_vs_val": {
+      "summary": {
+        "n_features_tested": 14202,
+        "ks_median": 0.11057816956183562,
+        "ks_p90": 0.16035779102929737,
+        "ks_gt_0p2": 0.018870581608224194,
+        "ks_gt_0p3": 0.0
+      },
+      "top": [
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_gldm_HighGrayLevelEmphasis",
+          "ks_stat": 0.29595540575576873,
+          "ks_pvalue": 0.00034161519583033977,
+          "delta_mean_std": -0.09005761443671227,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_gldm_LowGrayLevelEmphasis",
+          "ks_stat": 0.29595540575576873,
+          "ks_pvalue": 0.00034161519583033977,
+          "delta_mean_std": 0.12468490636819572,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__dose__wavelet-LHH_glrlm_HighGrayLevelRunEmphasis",
+          "ks_stat": 0.29491833030852993,
+          "ks_pvalue": 0.00036465608118538793,
+          "delta_mean_std": -0.10551587525656143,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__dose__wavelet-LHH_glrlm_LowGrayLevelRunEmphasis",
+          "ks_stat": 0.29491833030852993,
+          "ks_pvalue": 0.00036465608118538793,
+          "delta_mean_std": -0.15637313507398878,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__dose__original_glszm_SmallAreaEmphasis",
+          "ks_stat": 0.2889551464869069,
+          "ks_pvalue": 0.0005154251258841861,
+          "delta_mean_std": -0.2652651427847332,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_glcm_JointAverage",
+          "ks_stat": 0.2784547575836142,
+          "ks_pvalue": 0.0009261795170257544,
+          "delta_mean_std": -0.09975241700275403,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_glcm_SumAverage",
+          "ks_stat": 0.2784547575836142,
+          "ks_pvalue": 0.0009261795170257544,
+          "delta_mean_std": -0.09975242509622823,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__dose__original_gldm_SmallDependenceEmphasis",
+          "ks_stat": 0.2744360902255639,
+          "ks_pvalue": 0.0011562807546459308,
+          "delta_mean_std": -0.13032077339988904,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__dose__original_glszm_SizeZoneNonUniformityNormalized",
+          "ks_stat": 0.2723619393310863,
+          "ks_pvalue": 0.001296940806581647,
+          "delta_mean_std": -0.29217431256790255,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_glcm_Autocorrelation",
+          "ks_stat": 0.2701581540057039,
+          "ks_pvalue": 0.0014602163278595514,
+          "delta_mean_std": -0.09101467356583516,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_glcm_ClusterShade",
+          "ks_stat": 0.2671765620948924,
+          "ks_pvalue": 0.0017042031694631285,
+          "delta_mean_std": 0.34942383419881584,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__original_gldm_DependenceNonUniformityNormalized",
+          "ks_stat": 0.266658024371273,
+          "ks_pvalue": 0.001758445751571093,
+          "delta_mean_std": -0.34338043379503796,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__reldiff__dose__original_gldm_DependenceNonUniformityNormalized",
+          "ks_stat": 0.2662691210785585,
+          "ks_pvalue": 0.001788941025605678,
+          "delta_mean_std": -0.34268840720744165,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absratio__dose__original_gldm_DependenceNonUniformityNormalized",
+          "ks_stat": 0.2662691210785585,
+          "ks_pvalue": 0.001788941025605678,
+          "delta_mean_std": -0.2995306996545782,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-LLL_glcm_Id",
+          "ks_stat": 0.26536168006222455,
+          "ks_pvalue": 0.0018791808923499516,
+          "delta_mean_std": -0.27648564413063126,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-LLL_gldm_DependenceNonUniformityNormalized",
+          "ks_stat": 0.26510241120041483,
+          "ks_pvalue": 0.0019087525084402696,
+          "delta_mean_std": -0.3220638630551648,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__dose__wavelet-LLH_glszm_SmallAreaLowGrayLevelEmphasis",
+          "ks_stat": 0.2636764324604615,
+          "ks_pvalue": 0.0020502910714720744,
+          "delta_mean_std": -0.19640356012799487,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__diff__dose__original_gldm_DependenceNonUniformityNormalized",
+          "ks_stat": 0.26302826030593723,
+          "ks_pvalue": 0.002122029273044177,
+          "delta_mean_std": -0.21813742789326085,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-HLH_glszm_GrayLevelNonUniformity",
+          "ks_stat": 0.25978739953331603,
+          "ks_pvalue": 0.002514802988756219,
+          "delta_mean_std": 0.4151477976873405,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_glcm_SumSquares",
+          "ks_stat": 0.25823178636245786,
+          "ks_pvalue": 0.0027229728154880683,
+          "delta_mean_std": 0.10191981917099607,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-LLL_glcm_InverseVariance",
+          "ks_stat": 0.25758361420793363,
+          "ks_pvalue": 0.0028143655306464657,
+          "delta_mean_std": -0.21380292363570805,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__dose__wavelet-HLL_firstorder_Mean",
+          "ks_stat": 0.25641690432979,
+          "ks_pvalue": 0.002981800759407701,
+          "delta_mean_std": 0.22401366792764843,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__dose__wavelet-LLH_glszm_SmallAreaLowGrayLevelEmphasis",
+          "ks_stat": 0.25576873217526574,
+          "ks_pvalue": 0.0030828620631571275,
+          "delta_mean_std": -0.21317944430313018,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__dose__wavelet-HLL_gldm_LargeDependenceHighGrayLevelEmphasis",
+          "ks_stat": 0.25550946331345603,
+          "ks_pvalue": 0.0031193312098909257,
+          "delta_mean_std": -0.18865921198755967,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__min__dose__wavelet-HHH_firstorder_Uniformity",
+          "ks_stat": 0.2526575058335494,
+          "ks_pvalue": 0.003601897446828441,
+          "delta_mean_std": -0.2940043323108205,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-LLL_glcm_Idm",
+          "ks_stat": 0.25226860254083483,
+          "ks_pvalue": 0.003677491536029048,
+          "delta_mean_std": -0.20858375212878993,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_R__dose__wavelet-HHH_firstorder_Median",
+          "ks_stat": 0.25175006481721546,
+          "ks_pvalue": 0.003765556002945451,
+          "delta_mean_std": -0.23013934742266026,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__dose__wavelet-HLH_ngtdm_Strength",
+          "ks_stat": 0.25071298936997666,
+          "ks_pvalue": 0.003972326981367582,
+          "delta_mean_std": -0.18884935759779056,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-LLL_gldm_SmallDependenceEmphasis",
+          "ks_stat": 0.24980554835364271,
+          "ks_pvalue": 0.004152091769489504,
+          "delta_mean_std": -0.31813385774031866,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__max__dose__wavelet-HHH_firstorder_Entropy",
+          "ks_stat": 0.2488981073373088,
+          "ks_pvalue": 0.00433841132967698,
+          "delta_mean_std": 0.40948574736833954,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        }
+      ]
+    },
+    "train_vs_test": {
+      "summary": {
+        "n_features_tested": 14202,
+        "ks_median": 0.11576354679802955,
+        "ks_p90": 0.17500648172154523,
+        "ks_gt_0p2": 0.03647373609350796,
+        "ks_gt_0p3": 0.0
+      },
+      "top": [
+        {
+          "feature": "submand_L__dose__wavelet-LLL_gldm_SmallDependenceHighGrayLevelEmphasis",
+          "ks_stat": 0.27301011148561055,
+          "ks_pvalue": 0.0012514864953638565,
+          "delta_mean_std": -0.3328902934301615,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__dose__wavelet-HHH_glszm_SmallAreaEmphasis",
+          "ks_stat": 0.27262120819289604,
+          "ks_pvalue": 0.001279514967581532,
+          "delta_mean_std": -0.26056558730921103,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__original_firstorder_MeanAbsoluteDeviation",
+          "ks_stat": 0.26082447498055483,
+          "ks_pvalue": 0.0023792330489660726,
+          "delta_mean_std": -0.20944640567681094,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__wavelet-LLL_firstorder_MeanAbsoluteDeviation",
+          "ks_stat": 0.26082447498055483,
+          "ks_pvalue": 0.0023792330489660726,
+          "delta_mean_std": -0.21004536112014366,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_R__dose__wavelet-LHL_glszm_SmallAreaHighGrayLevelEmphasis",
+          "ks_stat": 0.2583614207933627,
+          "ks_pvalue": 0.0026966012516926366,
+          "delta_mean_std": 0.01620687700764734,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__original_glcm_SumSquares",
+          "ks_stat": 0.25706507648431426,
+          "ks_pvalue": 0.0028838741840954284,
+          "delta_mean_std": -0.2499832596500525,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-HLH_glrlm_ShortRunEmphasis",
+          "ks_stat": 0.2562872698988851,
+          "ks_pvalue": 0.0030021306383274196,
+          "delta_mean_std": 0.3998650193419375,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__wavelet-LLL_gldm_SmallDependenceHighGrayLevelEmphasis",
+          "ks_stat": 0.2561576354679803,
+          "ks_pvalue": 0.0030171204039270956,
+          "delta_mean_std": -0.277661179388718,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__min__dose__wavelet-LHH_glcm_Correlation",
+          "ks_stat": 0.2542131190044076,
+          "ks_pvalue": 0.003333076253039478,
+          "delta_mean_std": -0.21452168018578785,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__dose__original_glcm_DifferenceAverage",
+          "ks_stat": 0.25356494684988334,
+          "ks_pvalue": 0.003444969366401102,
+          "delta_mean_std": -0.28591393566792045,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__absdiff__dose__wavelet-HLH_firstorder_RootMeanSquared",
+          "ks_stat": 0.25226860254083483,
+          "ks_pvalue": 0.003677491536029048,
+          "delta_mean_std": 0.3425838841352373,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__dose__log-sigma-1-0-mm-3D_gldm_HighGrayLevelEmphasis",
+          "ks_stat": 0.2513611615245009,
+          "ks_pvalue": 0.0038456272659317856,
+          "delta_mean_std": 0.19553406789079109,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__dose__wavelet-HHH_glszm_GrayLevelNonUniformity",
+          "ks_stat": 0.25032408607726214,
+          "ks_pvalue": 0.004043845870098866,
+          "delta_mean_std": -0.39267103124344155,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__max__dose__wavelet-HHH_glszm_GrayLevelNonUniformity",
+          "ks_stat": 0.25006481721545243,
+          "ks_pvalue": 0.004101717257249255,
+          "delta_mean_std": -0.40995741049855094,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__dose__wavelet-LLL_glcm_DifferenceAverage",
+          "ks_stat": 0.24980554835364271,
+          "ks_pvalue": 0.004152091769489504,
+          "delta_mean_std": -0.28659645382597543,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__mean__dose__log-sigma-1-0-mm-3D_firstorder_Minimum",
+          "ks_stat": 0.24980554835364271,
+          "ks_pvalue": 0.004152091769489504,
+          "delta_mean_std": -0.1751439252307216,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__wavelet-LLL_glcm_SumSquares",
+          "ks_stat": 0.24954627949183303,
+          "ks_pvalue": 0.004200331460008522,
+          "delta_mean_std": -0.2500173674419354,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__absdiff__dose__log-sigma-2-0-mm-3D_glszm_SmallAreaHighGrayLevelEmphasis",
+          "ks_stat": 0.24876847290640394,
+          "ks_pvalue": 0.004367659417622132,
+          "delta_mean_std": 0.2812672919129789,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__dose__log-sigma-2-0-mm-3D_gldm_LowGrayLevelEmphasis",
+          "ks_stat": 0.24850920404459426,
+          "ks_pvalue": 0.004427830509102482,
+          "delta_mean_std": -0.04524105052338603,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__dose__wavelet-LLL_ngtdm_Complexity",
+          "ks_stat": 0.2476017630282603,
+          "ks_pvalue": 0.004627105227543875,
+          "delta_mean_std": -0.2881485407684978,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_L__dose__wavelet-HHL_glszm_SizeZoneNonUniformity",
+          "ks_stat": 0.24721285973554577,
+          "ks_pvalue": 0.004714714870417249,
+          "delta_mean_std": 0.2547134773887552,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand_L__dose__original_gldm_SmallDependenceHighGrayLevelEmphasis",
+          "ks_stat": 0.24643505315011668,
+          "ks_pvalue": 0.004888662645871386,
+          "delta_mean_std": -0.31279938098393,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__original_firstorder_Variance",
+          "ks_stat": 0.24578688099559243,
+          "ks_pvalue": 0.00504727562556904,
+          "delta_mean_std": -0.2507637575987288,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__original_glcm_ClusterTendency",
+          "ks_stat": 0.24578688099559243,
+          "ks_pvalue": 0.00504727562556904,
+          "delta_mean_std": -0.24860446429454494,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__original_gldm_GrayLevelVariance",
+          "ks_stat": 0.24578688099559243,
+          "ks_pvalue": 0.00504727562556904,
+          "delta_mean_std": -0.2507110987610361,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__wavelet-LLL_firstorder_Variance",
+          "ks_stat": 0.24578688099559243,
+          "ks_pvalue": 0.00504727562556904,
+          "delta_mean_std": -0.2508543487630312,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__wavelet-LLL_gldm_GrayLevelVariance",
+          "ks_stat": 0.24578688099559243,
+          "ks_pvalue": 0.00504727562556904,
+          "delta_mean_std": -0.2508598961386647,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "submand__sym__min__dose__log-sigma-1-0-mm-3D_firstorder_Minimum",
+          "ks_stat": 0.24539797770287788,
+          "ks_pvalue": 0.005151092678842452,
+          "delta_mean_std": -0.2087573267218,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid_L__dose__wavelet-HLH_glcm_SumSquares",
+          "ks_stat": 0.24474980554835365,
+          "ks_pvalue": 0.005315918948799959,
+          "delta_mean_std": 0.2833941633186527,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        },
+        {
+          "feature": "parotid__sym__min__dose__wavelet-LHH_gldm_DependenceVariance",
+          "ks_stat": 0.2438423645320197,
+          "ks_pvalue": 0.005551402075063215,
+          "delta_mean_std": -0.20710467048434955,
+          "missing_rate_train": 0.0,
+          "missing_rate_other": 0.0
+        }
+      ]
+    }
+  }
+}

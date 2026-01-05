@@ -1,0 +1,51 @@
+{
+  "AUC": 0.4178921568627451,
+  "AP": 0.3923346955265667,
+  "LogLoss": 0.6874498723294241,
+  "ACC": 0.3793103448275862,
+  "Precision": 0.2857142857142857,
+  "Recall": 0.3333333333333333,
+  "F1": 0.3076923076923077,
+  "Specificity": 0.4117647058823529,
+  "TN": 14,
+  "FP": 20,
+  "FN": 16,
+  "TP": 8,
+  "Threshold": 0.4,
+  "Spec_at_Recall95": 0.08823529411764708,
+  "FPR_at_Recall95": 0.9117647058823529,
+  "Thr_at_Recall95": 0.3633292216110484,
+  "AUC_CI95_L": 0.26071158008658013,
+  "AUC_CI95_U": 0.5766031559509819,
+  "Threshold_Source": {
+    "type": "train_oof",
+    "metric": "fixed0.4",
+    "value": 0.4
+  },
+  "Train_AUC": 0.6917832167832167,
+  "Train_AP": 0.6220175714573675,
+  "Train_LogLoss": 0.6356314781002629,
+  "Train_ACC": 0.5864661654135338,
+  "Train_Precision": 0.5,
+  "Train_Recall": 0.7818181818181819,
+  "Train_F1": 0.6099290780141844,
+  "Train_Specificity": 0.44871794871794873,
+  "Train_TN": 70,
+  "Train_FP": 86,
+  "Train_FN": 24,
+  "Train_TP": 86,
+  "Train_Threshold": 0.4,
+  "Train_Spec_at_Recall95": 0.16025641025641024,
+  "Train_FPR_at_Recall95": 0.8397435897435898,
+  "Train_Thr_at_Recall95": 0.33610288491451573,
+  "ConfusionMatrix_at_Recall95": [
+    [
+      3,
+      31
+    ],
+    [
+      1,
+      23
+    ]
+  ]
+}

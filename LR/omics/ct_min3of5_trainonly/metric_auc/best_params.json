@@ -1,0 +1,51 @@
+{
+  "model_kind": "lr_l1",
+  "search_metric": "auc",
+  "C": 7.409352260173368,
+  "l1_ratio": null,
+  "pca_n_components": null,
+  "calibration_method": "sigmoid",
+  "calibration_cv_inner": {
+    "type": "StratifiedKFold",
+    "n_splits": 3,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "calibration_cv_final": "prefit",
+  "class_weight": "balanced",
+  "missing_rate_max": 1.0,
+  "feature_selection": {
+    "corr_threshold": 1.0,
+    "variance_min": 0.0,
+    "k_best": 0
+  },
+  "stable_features_path": "outputs/selection/ct_ibsi_utest_lasso_seed42_k5_trainonly/stable_features_min3of5.csv",
+  "clip_abs": 20.0,
+  "nested_cv_params": [
+    {
+      "fold": 1,
+      "C": 0.8624128878036673,
+      "l1_ratio": null
+    },
+    {
+      "fold": 2,
+      "C": 49.912469738327374,
+      "l1_ratio": null
+    },
+    {
+      "fold": 3,
+      "C": 1.4099855544846822,
+      "l1_ratio": null
+    },
+    {
+      "fold": 4,
+      "C": 4.485345592157642,
+      "l1_ratio": null
+    },
+    {
+      "fold": 5,
+      "C": 32.424508577638655,
+      "l1_ratio": null
+    }
+  ]
+}

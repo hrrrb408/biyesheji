@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+.venv311/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.claude/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Large data files (uncomment if you want to exclude)
+# 383nii/
+# nii/
+# CT_crop/
+# Dose_crop/
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Test files
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Model outputs (optional - uncomment if you want to exclude model results)
+# LR/omics/
+# SVM/omics/
+# XGB/omics/
+outputs/features/*.csv
+outputs/features/ct_radiomics_raw.csv
+outputs/features/dosiomics_raw.csv
+outputs/features/ct_radiomics_ml.csv
+outputs/features/dosiomics_ml.csv
+# outputs/selection/

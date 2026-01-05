@@ -1,0 +1,28 @@
+{
+  "AUC": 0.5416666666666666,
+  "AP": 0.468576849677107,
+  "LogLoss": 0.733038511332568,
+  "ECE": 0.18418650136644588,
+  "Brier": 0.2696504910659179,
+  "ACC": 0.43103448275862066,
+  "Precision": 0.42105263157894735,
+  "Recall": 1.0,
+  "F1": 0.5925925925925926,
+  "Specificity": 0.029411764705882353,
+  "TN": 1,
+  "FP": 33,
+  "FN": 0,
+  "TP": 24,
+  "Threshold": 0.4,
+  "Spec_at_Recall95": 0.05882352941176472,
+  "FPR_at_Recall95": 0.9411764705882353,
+  "Thr_at_Recall95": 0.5109066323318427,
+  "AUC_CI95_L": 0.3918009868421052,
+  "AUC_CI95_U": 0.7055953847830279,
+  "_warning": "[WARNING] Test set predictions were inverted",
+  "Threshold_Source": {
+    "type": "train_oof",
+    "metric": "fixed0.4",
+    "value": 0.4
+  }
+}

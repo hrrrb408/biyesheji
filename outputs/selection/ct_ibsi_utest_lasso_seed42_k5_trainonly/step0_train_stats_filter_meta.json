@@ -1,0 +1,8 @@
+{
+  "n_input": 14202,
+  "n_after_missing": 14202,
+  "n_after_variance": 13913,
+  "n_after_corr": 6389,
+  "dropped_constant": 0,
+  "dropped_corr": 7524
+}
